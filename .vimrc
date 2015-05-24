@@ -1,29 +1,30 @@
 " random options
-set number			"line numbers on the left
-set nocompatible	"no vi compatibility
-set noexrc			"don't use ~/.exrc config
-set cursorline		"highlight the current line
-set noerrorbells	"no audio bell aka beeping
-set novisualbell	"no visual bell aka blinking
-set incsearch		"search while typing
-set hlsearch		"highlight all search matches
-set mouse=a			"Use mouse to navigate the file
+set number          "line numbers on the left
+set nocompatible    "no vi compatibility
+set noexrc          "don't use ~/.exrc config
+set cursorline      "highlight the current line
+set noerrorbells    "no audio bell aka beeping
+set novisualbell    "no visual bell aka blinking
+set incsearch       "search while typing
+set hlsearch        "highlight all search matches
+set mouse=a         "Use mouse to navigate the file
 
 " keys mapping
 map <F5> :w !python <CR>
 
 " indent options
-set autoindent		"set indenting
-set ts=4			"set tab space
-set sw=2			"set soft tab
-set noexpandtab		"do not expand a tab to spaces
-set shiftwidth=4	"set autoindent to one tab
-set colorcolumn=80	"vertical column for text width
+set autoindent      "set indenting
+set ts=4            "set tab space
+set sw=2            "set soft tab
+set tabstop=4       "tab equals to n spaces
+set expandtab       "expand a tab to spaces
+set shiftwidth=4    "set autoindent to one tab
+set colorcolumn=80  "vertical column for text width
 
 " more random options
-set shell=/bin/bash	"shell to use
-syntax on			"color syntax highlighting
-filetype plugin on	"load the filetype specific config
+set shell=/bin/bash  "shell to use
+syntax on            "color syntax highlighting
+filetype plugin on   "load the filetype specific config
 
 " color options
 set t_Co=256
