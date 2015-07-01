@@ -1,0 +1,6 @@
+(if
+	(is (application_name) "xchat")
+	(begin
+		(opacity 90)
+	)
+)
