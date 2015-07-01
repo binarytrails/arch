@@ -1,0 +1,11 @@
+StarDict's dict ifo file
+version=2.4.2
+wordcount=28153
+idxfilesize=499153
+sametypesequence=x
+bookname=Dictionnaire de l’Académie Française, 6ème édition (1835).
+author=Hugo Voisard et Christophe Durville.
+website=http://doc.ubuntu-fr.org/stardict
+email=cdurpp@ifrance.com
+date=2008.04.10
+description=v1.1 (2008), licence GNU-GPL. Mis au format stardict d’après le travail de numérisation de Ebooks Libres & Gratuits (http://www.ebooksgratuits.com).
