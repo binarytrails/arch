@@ -37,6 +37,7 @@ hi ColorColumn ctermbg=234
 hi CursorLine ctermbg=234    cterm=none
 hi CursorLineNr ctermfg=255
 hi LineNr ctermfg=DarkGrey cterm=none
+hi Search cterm=NONE ctermfg=white ctermbg=DarkGrey
 
 " Make vim recognize Y86 assembly files
 :autocmd BufNewFile,BufRead *.ys set ft=asm
