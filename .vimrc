@@ -1,30 +1,59 @@
+" *************************Vundle Plugin Manager*******************************
+filetype off
+
+" set the runtime path to include Vundle and initialize.
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'  " let Vundle manage Vundle, required.
+"Plugin 'jedi.vim'
+
+call vundle#end()
+filetype plugin indent on " ignore plugin indent: filetype plugin on.
+
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; `!` to auto-approve
+
+" seed database with the keywords of the programming language you're using.
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_autoclose_preview_window_after_completion=1
+
+" see :h vundle for more details or wiki for FAQ
+" *****************************************************************************
+
 " random options
-set number          "line numbers on the left
-set nocompatible    "no vi compatibility
-set noexrc          "don't use ~/.exrc config
-set cursorline      "highlight the current line
-set noerrorbells    "no audio bell aka beeping
-set novisualbell    "no visual bell aka blinking
-set incsearch       "search while typing
-set hlsearch        "highlight all search matches
-set mouse=a         "Use mouse to navigate the file
+set number                  " line numbers on the left.
+set nocompatible            " no vi compatibility.
+set noexrc                  " don't use ~/.exrc config.
+set cursorline              " highlight the current line.
+set noerrorbells            " no audio bell aka beeping.
+set novisualbell            " no visual bell aka blinking.
+set incsearch               " search while typing.
+set hlsearch                " highlight all search matches.
+set mouse=a                 " use mouse to navigate the file.
+set clipboard=unnamedplus   " enables in vim from gvim VISUAL y -> clipboard
+"set paste                  " no incremented tabs per line from paste;
+                            " commented to enable Vundle TAB completion.
 
 " keys mapping
 map <F5> :w !python <CR>
 
 " indent options
-set autoindent      "set indenting
-set ts=4            "set tab space
-set sw=2            "set soft tab
-set tabstop=4       "tab equals to n spaces
-set expandtab       "expand a tab to spaces
-set shiftwidth=4    "set autoindent to one tab
-set colorcolumn=80  "vertical column for text width
+set autoindent      " set indenting.
+set ts=4            " set tab space.
+set sw=2            " set soft tab.
+set tabstop=4       " tab equals to n spaces.
+set expandtab       " expand a tab to spaces.
+set shiftwidth=4    " set autoindent to one tab.
+set colorcolumn=80  " vertical column for text width.
 
 " more random options
-set shell=/bin/bash  "shell to use
-syntax on            "color syntax highlighting
-filetype plugin on   "load the filetype specific config
+set shell=/bin/bash  " shell to use.
+syntax on            " color syntax highlighting.
+filetype plugin on   " load the filetype specific config.
 
 " color options
 set t_Co=256
