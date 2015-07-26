@@ -1,0 +1,3 @@
+; add ds extension to see debug output
+(debug) 
+
