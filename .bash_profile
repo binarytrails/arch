@@ -1,11 +1,14 @@
-#
-# ~/.bashrc
-#
-
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# PS1='[\u@\h \W]\$ '
+PS1='\[\e[0;35m\]\u\[\e[1;30m\]@\[\e[1;37m\]\h \[\e[0;32m\]\W \[\e[1;00m\]$\[\e[0m\] '
+
+# do not put in history if starts with space
+export HISTCONTROL=ignorespace
+
 alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 alias burp='java -jar -Xmx512m ~/Downloads/Software/app/burpsuite_free_v1.6.01.jar &'
 
 # set before with 'sdcv --data-dir ~/.stardict/dic/'
@@ -16,14 +19,11 @@ alias english_dict='sdcv -u "WordNet"'
 alias setclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
 
-# PS1='[\u@\h \W]\$ '
-PS1='\[\e[0;35m\]\u\[\e[1;30m\]@\[\e[1;37m\]\h \[\e[0;32m\]\W \[\e[1;00m\]$\[\e[0m\] '
+# truly nuke a file
+alias shred=' shred -vzun 50'
 
 # removes git push gnome widget
 unset SSH_ASKPASS
-
-# do not put in history if starts with space
-export HISTCONTROL=ignorespace
 
 # wiki-browser-html
 export wiki_browser=firefox
