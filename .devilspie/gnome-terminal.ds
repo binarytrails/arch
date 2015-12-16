@@ -1,6 +1,9 @@
 (if
 	(is (application_name) "Terminal")
 	(begin
-		(opacity 85)
-	)
+        (center)
+        (opacity 85)
+        (undecorate)
+        (geometry "790x480")
+    )
 )
