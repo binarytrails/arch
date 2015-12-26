@@ -9,7 +9,10 @@ export HISTCONTROL=ignorespace
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias burp='java -jar -Xmx512m ~/Downloads/Software/app/burpsuite_free_v1.6.01.jar &'
+alias mocp='mocp --music-dir --theme=transparent-background'
+
+alias burp='java -jar -Xmx512m ~/opt/burpsuite_free_v1.6.01.jar &'
+alias sublime='~/opt/sublime_text_3/sublime_text'
 
 # set before with 'sdcv --data-dir ~/.stardict/dic/'
 alias french_dict='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
