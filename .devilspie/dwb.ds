@@ -1,0 +1,7 @@
+(if
+	(is (application_name) "dwb")
+	(begin
+        (center)
+        (undecorate)
+    )
+)
