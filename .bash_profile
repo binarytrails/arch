@@ -40,6 +40,3 @@ function swap()
     mv $TMPFILE "$2"
 }
 
-# enables transparency
-devilspie &
-
