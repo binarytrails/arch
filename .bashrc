@@ -1,3 +1,6 @@
+# start new terminal in last directory
+. /etc/profile.d/vte.sh
+
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -13,6 +16,7 @@ alias mocp='mocp --music-dir --theme=transparent-background'
 
 alias burp='java -jar -Xmx512m ~/opt/burpsuite_free_v1.6.01.jar &'
 alias sublime='~/opt/sublime_text_3/sublime_text'
+alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
 
 # set before with 'sdcv --data-dir ~/.stardict/dic/'
 alias french_dict='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
@@ -40,3 +44,4 @@ function swap()
     mv $TMPFILE "$2"
 }
 
+now_date=$(date +%d-%m-%Y)

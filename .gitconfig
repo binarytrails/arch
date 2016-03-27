@@ -1,0 +1,5 @@
+[user]
+	email = mail@sevaivanov.com
+	name = Seva Ivanov
+[push]
+	default = simple
