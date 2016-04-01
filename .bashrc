@@ -4,8 +4,8 @@
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# PS1='[\u@\h \W]\$ '
-PS1='\[\e[0;35m\]\u\[\e[1;30m\]@\[\e[1;37m\]\h \[\e[0;32m\]\W \[\e[1;00m\]$\[\e[0m\] '
+#PS1='\[\e[0;35m\]\u\[\e[1;30m\]@\[\e[1;37m\]\h \[\e[0;32m\]\W \[\e[1;00m\]$\[\e[0m\] '
+PS1='\[\e[0;35m\]\u\[\e[1;30m\] \W \[\e[1;00m\]$\[\e[0m\] '
 
 # do not put in history if starts with space
 export HISTCONTROL=ignorespace
@@ -19,8 +19,8 @@ alias sublime='~/opt/sublime_text_3/sublime_text'
 alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
 
 # set before with 'sdcv --data-dir ~/.stardict/dic/'
-alias french_dict='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
-alias english_dict='sdcv -u "WordNet"'
+alias fr='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
+alias en='sdcv -u "WordNet"'
 
 # interact with clipboard
 alias setclip='xclip -selection c'
@@ -35,6 +35,11 @@ unset SSH_ASKPASS
 # wiki-browser-html
 export wiki_browser=firefox
 
+function sprunge()
+{
+    "$@" | curl -F 'sprunge=<-' http://sprunge.us
+}
+
 # swap filenames
 function swap()         
 {
@@ -45,3 +50,4 @@ function swap()
 }
 
 now_date=$(date +%d-%m-%Y)
+
