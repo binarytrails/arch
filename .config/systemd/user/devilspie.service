@@ -1,0 +1,8 @@
+[Unit]
+Description=Devilspie
+
+[Service]
+ExecStart=/usr/bin/devilspie
+
+[Install]
+WantedBy=default.target
