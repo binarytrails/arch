@@ -29,6 +29,9 @@ alias getclip='xclip -selection clipboard -o'
 # truly nuke a file
 alias shred=' shred -vzun 50'
 
+# assassins
+alias kring='killall {dring,gnome-ring}'
+
 # removes git push gnome widget
 unset SSH_ASKPASS
 
