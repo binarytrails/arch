@@ -9,6 +9,7 @@ PS1='\[\e[0;35m\]\u\[\e[1;30m\] \W \[\e[1;00m\]$\[\e[0m\] '
 
 # do not put in history if starts with space
 export HISTCONTROL=ignorespace
+export EDITOR=vim
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
