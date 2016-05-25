@@ -1,26 +1,17 @@
-" *************************Vundle Plugin Manager*******************************
-filetype off
+call plug#begin('~/.vim/plugged')
+ 
+ Plug 'MattesGroeger/vim-bookmarks'
+ highlight BookmarkSign ctermbg=NONE ctermfg=160
+ highlight BookmarkLine ctermbg=194 ctermfg=NONE
+ let g:bookmark_sign = '⚑'
+ let g:bookmark_highlight_lines = 1
 
-" set the runtime path to include Vundle and initialize.
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+ Plug 'Valloric/YouCompleteMe'
+ let g:ycm_seed_identifiers_with_syntax = 1
+ let g:ycm_min_num_of_chars_for_completion = 1
+ let g:ycm_autoclose_preview_window_after_completion=1
 
-Plugin 'gmarik/Vundle.vim'  " let Vundle manage Vundle, required.
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'davidhalter/jedi-vim'
-
-call vundle#end()
-
-" YouCompleMe
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_autoclose_preview_window_after_completion=1
-
-" Jedi-Vim
-"let g:jedi#use_tabs_not_buffers = 1
-
-" Write ':h vundle' for more details.
-" *****************************************************************************
+call plug#end()
 
 " options
 set number                  " line numbers on the left.
