@@ -56,6 +56,10 @@ function swap()
 }
 now_date=$(date +%d-%m-%Y)
 
+synclient TapButton1=1 # 1 finger  = left click
+synclient TapButton2=3 # 2 fingers = right click
+synclient TapButton3=2 # 3 fingers = middle click
+
 # reminders
 # export LD_LIBRARY_PATH="$(pwd)"
 # /usr/lib/python3.5/site-packages/Cython/Includes/libcpp/
