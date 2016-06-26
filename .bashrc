@@ -11,7 +11,10 @@ PS1='\[\e[0;35m\]\u\[\e[1;30m\] \W \[\e[1;00m\]$\[\e[0m\] '
 export HISTCONTROL=ignorespace
 export EDITOR=vim
 
-alias ls='ls --color=auto'
+alias j='jobs'
+alias f='fg'
+alias l='ls --color=auto'
+
 alias grep='grep --color=auto'
 alias mocp='mocp --music-dir --theme=transparent-background'
 
@@ -30,8 +33,9 @@ alias getclip='xclip -selection clipboard -o'
 # truly nuke a file
 alias shred=' shred -vzun 50'
 
-# assassins
+# dev life
 alias kring='killall {dring,gnome-ring}'
+alias dring='SIPLOGLEVEL=0 AVLOGLEVEL=0 RING_TLS_LOGLEVEL=0 dring'
 
 # removes git push gnome widget
 unset SSH_ASKPASS
@@ -43,8 +47,6 @@ function sprunge()
 {
     "$@" | curl -F 'sprunge=<-' http://sprunge.us
 }
-
-# swap filenames
 function swap()         
 {
     local TMPFILE=tmp.$$
@@ -52,6 +54,9 @@ function swap()
     mv "$2" "$1"
     mv $TMPFILE "$2"
 }
-
 now_date=$(date +%d-%m-%Y)
+
+# reminders
+# export LD_LIBRARY_PATH="$(pwd)"
+# /usr/lib/python3.5/site-packages/Cython/Includes/libcpp/
 
