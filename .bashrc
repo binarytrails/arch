@@ -14,7 +14,7 @@ export EDITOR=vim
 alias j='jobs'
 alias f='fg'
 alias l='ls --color=auto'
-
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias mocp='mocp --music-dir --theme=transparent-background'
 
@@ -30,8 +30,9 @@ alias en='sdcv -u "WordNet"'
 alias setclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
 
-# truly nuke a file
-alias shred=' shred -vzun 50'
+# handy
+alias shred='shred -vzun 50'    # truly nuke a file
+alias catwn='tail -n +1'        # cat [w]ith file[n]ames
 
 # dev life
 alias kring='killall {dring,gnome-ring}'
