@@ -21,6 +21,7 @@ alias mocp='mocp --music-dir --theme=transparent-background'
 alias burp='java -jar -Xmx512m ~/opt/burpsuite_free_v1.6.01.jar &'
 alias sublime='~/opt/sublime_text_3/sublime_text'
 alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
+alias mermaid='~/opt/node_modules/mermaid/bin/mermaid.js'
 
 # set before with 'sdcv --data-dir ~/.stardict/dic/'
 alias fr='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
@@ -57,9 +58,12 @@ function swap()
 }
 now_date=$(date +%d-%m-%Y)
 
+# env setup until better place is found
 synclient TapButton1=1 # 1 finger  = left click
 synclient TapButton2=3 # 2 fingers = right click
 synclient TapButton3=2 # 3 fingers = middle click
+
+systemctl start --user devilspie
 
 # reminders
 # export LD_LIBRARY_PATH="$(pwd)"

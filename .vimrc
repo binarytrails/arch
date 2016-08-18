@@ -32,7 +32,7 @@ syntax on            " color syntax highlighting.
 filetype plugin on   " load the filetype specific config.
 
 " keys mapping
-map <F5> :w !python <CR>
+"map <F5> :w !python <CR>
 map // y/<C-R>"<CR>         " search visually selected text
 
 " indent options
