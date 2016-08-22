@@ -27,7 +27,7 @@ alias mermaid='~/opt/node_modules/mermaid/bin/mermaid.js'
 alias fr='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
 alias en='sdcv -u "WordNet"'
 
-# interact with clipboard
+# clipboard interactions
 alias setclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
 
@@ -45,6 +45,16 @@ unset SSH_ASKPASS
 # wiki-browser-html
 export wiki_browser=firefox
 
+# windows transparency
+if [ "$(systemctl --user is-active devilspie)" == "inactive" ]; then
+    systemctl start --user devilspie
+fi
+
+# welcome ascii drawing with text
+RANDOM=$$$(date +%s)
+COWFILE=$(cows=($(cowsay -l)); echo ${cows[RANDOM % ${#cows[@]}]})
+cowsay -f $COWFILE $(fortune)
+
 function sprunge()
 {
     "$@" | curl -F 'sprunge=<-' http://sprunge.us
@@ -57,15 +67,3 @@ function swap()
     mv $TMPFILE "$2"
 }
 now_date=$(date +%d-%m-%Y)
-
-# env setup until better place is found
-synclient TapButton1=1 # 1 finger  = left click
-synclient TapButton2=3 # 2 fingers = right click
-synclient TapButton3=2 # 3 fingers = middle click
-
-systemctl start --user devilspie
-
-# reminders
-# export LD_LIBRARY_PATH="$(pwd)"
-# /usr/lib/python3.5/site-packages/Cython/Includes/libcpp/
-

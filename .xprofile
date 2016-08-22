@@ -1,0 +1,7 @@
+# Touchpad behaviour
+synclient TapButton1=1      # 1 finger  = left click
+synclient TapButton2=3      # 2 fingers = right click
+synclient TapButton3=2      # 3 fingers = middle click
+
+# Desktop widgets
+conky -d -c ~/.conky/widgets/clock-rings/conkyrc
