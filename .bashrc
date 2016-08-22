@@ -52,8 +52,9 @@ fi
 
 # welcome ascii drawing with text
 RANDOM=$$$(date +%s)
-COWFILE=$(cows=($(cowsay -l)); echo ${cows[RANDOM % ${#cows[@]}]})
-cowsay -f $COWFILE $(fortune)
+COWS=($(basename --suffix=.cow $(ls -1 /usr/share/cows)))
+COW=$(echo ${COWS[RANDOM % ${#COWS[@]}]})
+cowsay -f $COW $(fortune); echo
 
 function sprunge()
 {
