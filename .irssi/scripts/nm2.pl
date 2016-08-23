@@ -100,6 +100,11 @@ our %IRSSI = (
 # /set neat_history <number>
 # * number : number of formatted lines to remember for dynamic mode
 #
+# Examples:
+#   align nicks left                /format neat_style  , , , , c , p , , t ,
+#   align nicks right               /format neat_style  , , p , , c , , , t ,
+#
+#   set . pad char in dark grey     /format neat_pad_char = %K.
 
 my @action_protos = qw(irc silc xmpp);
 my (%histories, %S, @style, @astyle, %format_ok, %cmmap);
