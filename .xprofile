@@ -3,5 +3,8 @@ synclient TapButton1=1      # 1 finger  = left click
 synclient TapButton2=3      # 2 fingers = right click
 synclient TapButton3=2      # 3 fingers = middle click
 
+# User services
+systemctl start --user irssi-libnotify
+
 # Desktop widgets
 conky -qd -x -1000 -y 1000 -c ~/.conky/widgets/clock-rings/conkyrc

@@ -1,0 +1,8 @@
+[Unit]
+Description=irssi-libnotify-git
+
+[Service]
+ExecStart=/usr/bin/notify-listener
+
+[Install]
+WantedBy=default.target
