@@ -7,4 +7,5 @@ synclient TapButton3=2      # 3 fingers = middle click
 systemctl start --user irssi-libnotify
 
 # Desktop widgets
-conky -qd -x -1000 -y 1000 -c ~/.conky/widgets/clock-rings/conkyrc
+conky -qd -c ~/.conky/widgets/clock-rings/conkyrc
+conky -qd -c ~/.conky/widgets/sysinfo/conkyrc

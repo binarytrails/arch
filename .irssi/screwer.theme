@@ -262,19 +262,21 @@ formats = {
     part = "%K««%N$[-9]0%K« {chanhost $1} %Kleaves $2 {reason $3}";
     quit = "%K««%N$[-9]0%K« {chanhost $1} %Kquits {reason $2}";
     kick = "%R«%r«%N$[-9]0%K  was kicked from%N {channel $1} %Kby%N $2 {reason $3}";
-    own_msg = "{ownmsgnick $2 {ownnick $[-9]0}}$1";
-    own_msg_channel = "{ownmsgnick $3 {ownnick $[-9]0}{msgchannel $1}}$2";
-    pubmsg_me = "{pubmsgmenick $2 {menick $[-9]0}}$1";
-    pubmsg_me_channel = "{pubmsgmenick $3 {menick $[-9]0}{msgchannel $1}}$2";
-    pubmsg_hilight = "{pubmsghinick $0 $3 $[-9]1}$2";
-    pubmsg_hilight_channel = "{pubmsghinick $0 $4 $[-9]1{msgchannel $2}}$3";
-    pubmsg = "{pubmsgnick $2 {pubnick $[-9]0}}$1";
-    pubmsg_channel = "{pubmsgnick $3 {pubnick $[-9]0}{msgchannel $1}}$2";
+    own_msg = "{ownmsgnick $nickalign$2 {ownnick $nickcolor$[.15]0}$nicktrunc}$1";
+    own_msg_channel = "{ownmsgnick $nickalign$3 {ownnick $nickcolor$[.15]0}{msgchannel $1}$nicktrunc}$2";
+    pubmsg_me = "{pubmsgmenick $nickalign$2 {menick $[.15]0}$nicktrunc}$1";
+    pubmsg_me_channel = "{pubmsgmenick $nickalign$3 {menick $[.15]0}{msgchannel $1}$nicktrunc}$2";
+    pubmsg_hilight = "{pubmsghinick $0 $nickalign$3 $[.15]1$nicktrunc}$2";
+    pubmsg_hilight_channel = "{pubmsghinick $0 $nickalign$4 $[.15]1{msgchannel $2}$nicktrunc}$3";
+    pubmsg = "{pubmsgnick $nickalign$2 {pubnick $nickcolor$[.15]0}$nicktrunc}$1";
+    pubmsg_channel = "{pubmsgnick $nickalign$3 {pubnick $nickcolor$[.15]0}{msgchannel $1}$nicktrunc}$2";
     set_item = "$0 %K=%N $1";
     line_start_irssi = "{line_start}{hilight %KIrssi:%N }";
     nick_changed = "%K--%N{channick $[-9]0}%K- is now known as%N {nick $1}";
     your_nick_changed = "%K--%N You're now known as {nick $1}";
     daychange = "%K----%N Day changed to %%d %%b %%Y";
+    own_msg_private_query = "{ownprivmsgnick $nickalign{ownprivnick $nickcolor$[.15]2}$nicktrunc}$1";
+    msg_private_query = "{privmsgnick $nickalign$nickcolor$[.15]0$nicktrunc}$2";
   };
   "fe-common/irc" = {
     chanmode_change = "%K--modechange {channel $0}:%N {mode $1} %Kby%N $2";
@@ -300,13 +302,19 @@ formats = {
     default_event_server = "%K|%n {whois ircdmsg $1 [$0]}";
 
     server_chanmode_change = "{netsplit IRCDMode}%K/$0 %n{mode $1} %Kby%N {nick $2}";
-    own_action = "{ownaction $[-9]0}$1";
-    action_public = "{pubaction $[-9]0}$1";
+    own_action = "$nickalign{ownaction $0$nicktrunc}$1";
+    action_public = "$nickalign{pubaction $0$nicktrunc}$1";
     action_public_channel = "{pubaction $[-9]0{msgchannel $1}}$2";
     channel_created = "%K-- Channel%n $0 %Kcreated%n $1";
     topic = "%K-- Topic for %n$0: $1";
     no_topic = "%K-- No topic set for %n$0";
     topic_info = "%K-- Topic set by%n {nick $0} {nickhost $2} {comment $1}";
     channel_synced = "%KJoin to%n {channel $0} %Kwas synced in%n {hilight $1} secs";
+    action_private = "$nickalign{pvtaction $0$nicktrunc}$2";
+    action_private_query = "$nickalign{pvtaction_query $0$nicktrunc}$2";
+  };
+  "Irssi::Script::nm2" = {
+    neat_style = " , , p , , c , , , t ,";
+    neat_pad_char = "%K.";
   };
 };
