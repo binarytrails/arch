@@ -1,0 +1,51 @@
+[legacy/profiles:]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '22178f17-59dc-431d-84cd-f1a13782ce9b', 'eeda7a29-068b-4a16-b348-ec6cabb9bad0']
+default='22178f17-59dc-431d-84cd-f1a13782ce9b'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(183,194,195)'
+rewrap-on-resize=true
+visible-name='Solarized Blue'
+palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+use-system-font=false
+use-theme-colors=false
+font='Monospace 13'
+allow-bold=false
+background-color='rgb(0,43,54)'
+scrollbar-policy='never'
+audible-bell=true
+
+[legacy/profiles:/:22178f17-59dc-431d-84cd-f1a13782ce9b]
+foreground-color='rgb(184,191,191)'
+rewrap-on-resize=true
+visible-name='Dark'
+palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+default-size-columns=80
+scroll-on-output=true
+use-system-font=false
+use-theme-colors=false
+font='Monospace 13'
+allow-bold=false
+scroll-on-keystroke=true
+background-color='rgb(24,24,24)'
+audible-bell=true
+scrollbar-policy='never'
+
+[legacy/profiles:/:eeda7a29-068b-4a16-b348-ec6cabb9bad0]
+foreground-color='rgb(24,24,24)'
+rewrap-on-resize=true
+visible-name='Bright'
+palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(104,40,40)', 'rgb(46,91,1)', 'rgb(133,118,0)', 'rgb(40,77,116)', 'rgb(173,127,168)', 'rgb(22,111,111)', 'rgb(238,238,236)']
+default-size-columns=80
+use-system-font=false
+use-theme-colors=false
+font='Monospace 12'
+allow-bold=false
+background-color='rgb(216,221,221)'
+audible-bell=true
+scrollbar-policy='never'
+
+[legacy]
+schema-version=uint32 3
+theme-variant='system'
+default-show-menubar=false
