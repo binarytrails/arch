@@ -1,0 +1,20 @@
+sudo pacman -S wget devilspie cowsay fortune-mod git
+
+mkdir build
+cd build
+
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
+tar -xvf packer.tar.gz
+cd packer
+makepkg -s PKGBUILD
+sudo pacman -U $(basename $(ls packer-20*))
+
+packer -S --noconfirm --noedit vim-plug
+
+cd ~/
+git init
+git remote add origin https://github.com/sevaivanov/archlinux-setup.git
+git fetch
+git checkout -t origin/master
+git submodule init
+git submodule update
