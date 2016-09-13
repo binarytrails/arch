@@ -1,5 +1,6 @@
 # Settings
 dconf load /org/gnome/terminal/ < .config/dconf/backup/org.gnome.terminal
+dconf load /org/gnome/desktop/interface/ < .config/dconf/backup/org.gnome.desktop.interface
 dconf load /org/gnome/desktop/wm/ < .config/dconf/backup/org.gnome.desktop.wm
 
 # Network
