@@ -4,3 +4,9 @@
 [submodule ".conky/widgets"]
 	path = .conky/widgets
 	url = https://github.com/sevaivanov/conky-widgets
+[submodule "GitHub/public/small-projects"]
+	path = GitHub/public/small-projects
+	url = https://github.com/sevaivanov/small-projects
+[submodule "GitHub/public/tumahn.net"]
+	path = GitHub/public/tumahn.net
+	url = https://github.com/sevaivanov/tumahn.net
