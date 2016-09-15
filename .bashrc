@@ -14,10 +14,17 @@ export EDITOR=vim
 alias j='jobs'
 alias f='fg'
 alias l='ls --color=auto'
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias mocp='mocp --music-dir --theme=transparent-background'
 
+# network-manager
+alias qnm='systemctl status NetworkManager'
+alias jnm='journalctl -rxt NetworkManager'
+alias rnm='sudo systemctl restart NetworkManager'
+
+# ~/opt/
 alias burp='java -jar -Xmx512m ~/opt/burpsuite_free_v1.6.01.jar &'
 alias sublime='~/opt/sublime_text_3/sublime_text'
 alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
@@ -56,10 +63,12 @@ COWS=($(basename --suffix=.cow $(ls -1 /usr/share/cows)))
 COW=$(echo ${COWS[RANDOM % ${#COWS[@]}]})
 cowsay -f $COW $(fortune); echo
 
+# paste it
 function sprunge()
 {
     "$@" | curl -F 'sprunge=<-' http://sprunge.us
 }
+
 function swap()         
 {
     local TMPFILE=tmp.$$
@@ -67,4 +76,6 @@ function swap()
     mv "$2" "$1"
     mv $TMPFILE "$2"
 }
+
 now_date=$(date +%d-%m-%Y)
+
