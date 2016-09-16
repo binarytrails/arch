@@ -19,20 +19,22 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias mocp='mocp --music-dir --theme=transparent-background'
 
-# network-manager
+# network-manager (see: *nmcli* for more)
 alias qnm='systemctl status NetworkManager'
 alias jnm='journalctl -rxt NetworkManager'
 alias rnm='sudo systemctl restart NetworkManager'
+alias cnm='sudo vim /etc/NetworkManager/NetworkManager.conf'
 
-# ~/opt/
+# various opt
 alias burp='java -jar -Xmx512m ~/opt/burpsuite_free_v1.6.01.jar &'
 alias sublime='~/opt/sublime_text_3/sublime_text'
-alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
 alias mermaid='~/opt/node_modules/mermaid/bin/mermaid.js'
+alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
 
-# set before with 'sdcv --data-dir ~/.stardict/dic/'
+# language
 alias fr='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
 alias en='sdcv -u "WordNet"'
+# note: set before with 'sdcv --data-dir ~/.stardict/dic/'
 
 # clipboard interactions
 alias setclip='xclip -selection c'
