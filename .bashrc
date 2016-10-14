@@ -14,10 +14,12 @@ export EDITOR=vim
 alias j='jobs'
 alias f='fg'
 alias l='ls --color=auto'
+alias tj='journalctl -xr -S today -U tomorrow'      # today journal
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias mocp='mocp --music-dir --theme=transparent-background'
+alias pandoc='pandoc --variable urlcolor=cyan'
 
 # network-manager (see: *nmcli* for more)
 alias qnm='systemctl status NetworkManager'
