@@ -1,1 +1,1 @@
-nickcolor_expando.pl
+../nickcolor_expando.pl
