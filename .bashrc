@@ -83,9 +83,14 @@ function swap()
 
 now_date=$(date +%d-%m-%Y)
 
-function dd_usb()
+function image2usb()
 {
     # $1 = image; $2 = sdx
     sudo dd bs=4M if=$1 of=$2 status=progress && sync
 }
 
+function mov2mp4()
+{
+    # $1 = input; $2 = output
+    ffmpeg -i $1 -f mp4 -vcodec copy -acodec copy $2
+}
