@@ -56,11 +56,6 @@ unset SSH_ASKPASS
 # wiki-browser-html
 export wiki_browser=firefox
 
-# windows transparency
-if [ "$(systemctl --user is-active devilspie)" == "inactive" ]; then
-    systemctl start --user devilspie
-fi
-
 # welcome ascii drawing with text
 RANDOM=$$$(date +%s)
 COWS=($(basename --suffix=.cow $(ls -1 /usr/share/cows)))
