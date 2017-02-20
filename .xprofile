@@ -1,4 +1,5 @@
 # User services
+systemctl start --user devilspie
 systemctl start --user irssi-libnotify
 
 # Desktop widgets
