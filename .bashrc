@@ -89,3 +89,14 @@ function mov2mp4()
     # $1 = input; $2 = output
     ffmpeg -i $1 -f mp4 -vcodec copy -acodec copy $2
 }
+
+function rmfexts()
+{
+    # $1 = extension; $@ (rest) = files
+    local suffix=$1;
+    shift;
+    for f in $($@); do
+        echo $(basename --suffix $suffix $f)
+        mv $f $(basename --suffix $suffix $f);
+    done
+}
