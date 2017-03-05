@@ -45,19 +45,19 @@ set shiftwidth=4    " set autoindent to one tab.
 set colorcolumn=80  " vertical column for text width.
 
 " color options
-set t_Co=256
 "colorscheme elflord
-colorscheme desert
 "colorscheme slate
+colorscheme onehalfdark
 
+"set t_Co=256
+"colorscheme desert
 " changes to colorscheme
-hi ColorColumn ctermbg=234
-hi CursorLine ctermbg=234    cterm=none
-hi CursorLineNr ctermfg=255
-hi LineNr ctermfg=DarkGrey cterm=none
-hi Search cterm=NONE ctermfg=white ctermbg=DarkGrey
+"hi ColorColumn ctermbg=234
+"hi CursorLine ctermbg=234    cterm=none
+"hi CursorLineNr ctermfg=255
+"hi LineNr ctermfg=DarkGrey cterm=none
+"hi Search cterm=NONE ctermfg=white ctermbg=DarkGrey
 
 " Make vim recognize Y86 assembly files
 :autocmd BufNewFile,BufRead *.ys set ft=asm
 ":autocmd BufNewFile,BufRead *.ys set nosmartindent
-
