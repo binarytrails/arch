@@ -10,6 +10,7 @@ PS1='\[\e[0;35m\]\u\[\e[1;30m\] \W \[\e[1;00m\]$\[\e[0m\] '
 # do not put in history if starts with space
 export HISTCONTROL=ignorespace
 export EDITOR=vim
+export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin"
 
 alias j='jobs'
 alias f='fg'
