@@ -6,12 +6,20 @@ call plug#begin('~/.vim/plugged')
  let g:bookmark_sign = '⚑'
  let g:bookmark_highlight_lines = 1
 
- Plug 'Valloric/YouCompleteMe'
- let g:ycm_seed_identifiers_with_syntax = 1
- let g:ycm_min_num_of_chars_for_completion = 1
- let g:ycm_autoclose_preview_window_after_completion=1
+ "Plug 'Valloric/YouCompleteMe'
+ "let g:ycm_python_binary_path = 'python'
+ "let g:ycm_seed_identifiers_with_syntax = 1
+ "let g:ycm_min_num_of_chars_for_completion = 1
+ "let g:ycm_autoclose_preview_window_after_completion=1
+ "let g:ycm_auto_trigger = 1
+
+ Plug 'davidhalter/jedi-vim'
+ let g:jedi#popup_on_dot = 0
+ let g:jedi#show_call_signatures = "1"
 
 call plug#end()
+
+"set omnifunc=syntaxcomplete#Complete "YCM ctrl+space fix attempt
 
 " options
 set number                  " line numbers on the left.
