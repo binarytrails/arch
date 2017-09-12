@@ -5,7 +5,7 @@
 [[ $- != *i* ]] && return
 
 #PS1='\[\e[0;35m\]\u\[\e[1;30m\]@\[\e[1;37m\]\h \[\e[0;32m\]\W \[\e[1;00m\]$\[\e[0m\] '
-PS1='\[\e[0;35m\]\u\[\e[1;30m\] \W \[\e[1;00m\]$\[\e[0m\] '
+PS1='\[\e[0;35m\]\u\[\e[1;31m\] \W \[\e[1;00m\]$\[\e[0m\] '
 
 # do not put in history if starts with space
 export HISTCONTROL=ignorespace
@@ -46,6 +46,7 @@ alias getclip='xclip -selection clipboard -o'
 # handy
 alias shred='shred -vzun 50'    # truly nuke a file
 alias catwn='tail -n +1'        # cat [w]ith file[n]ames
+alias php2html='wget --convert-links --mirror --adjust-extension'
 
 # dev life
 alias kring='killall {dring,gnome-ring}'
@@ -101,3 +102,4 @@ function rmfexts()
         mv $f $(basename --suffix $suffix $f);
     done
 }
+
