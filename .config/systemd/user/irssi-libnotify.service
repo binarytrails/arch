@@ -2,7 +2,7 @@
 Description=irssi-libnotify-git
 
 [Service]
-ExecStart=/usr/bin/notify-listener
+ExecStart=/usr/bin/notify-listener.py
 
 [Install]
 WantedBy=default.target
