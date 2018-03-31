@@ -17,6 +17,15 @@ call plug#begin('~/.vim/plugged')
  let g:jedi#popup_on_dot = 0
  let g:jedi#show_call_signatures = "1"
 
+ Plug 'vim-scripts/vim-auto-save'
+ let g:auto_save = 1
+ let g:auto_save_no_updatetime = 0
+ let g:auto_save_in_insert_mode = 1
+ let g:auto_save_silent = 1
+
+ Plug 'munshkr/vim-tidal'
+ Plug 'tikhomirov/vim-glsl'
+
 call plug#end()
 
 "set omnifunc=syntaxcomplete#Complete "YCM ctrl+space fix attempt
