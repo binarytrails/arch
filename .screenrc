@@ -1,0 +1,2 @@
+caption string "%{03} "     # horizontal
+rendition so =00            # veritcal
