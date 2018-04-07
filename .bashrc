@@ -1,3 +1,5 @@
+# @author Vsevolod Ivanov
+
 # start new terminal in last directory
 . /etc/profile.d/vte.sh
 
@@ -5,7 +7,7 @@
 [[ $- != *i* ]] && return
 
 #PS1='\[\e[0;35m\]\u\[\e[1;30m\]@\[\e[1;37m\]\h \[\e[0;32m\]\W \[\e[1;00m\]$\[\e[0m\] '
-PS1='\[\e[0;35m\]\u\[\e[1;31m\] \W \[\e[1;00m\]$\[\e[0m\] '
+PS1='\[\e[2;49;37m\]\u\[\e[2;49;39m\] \W \[\e[1;00m\]$\[\e[0m\] '
 
 # do not put in history if starts with space
 export HISTCONTROL=ignorespace
