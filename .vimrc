@@ -28,7 +28,7 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-"set omnifunc=syntaxcomplete#Complete "YCM ctrl+space fix attempt
+set omnifunc=syntaxcomplete#Complete "YCM ctrl+space fix attempt
 
 " options
 set number                  " line numbers on the left.
@@ -64,16 +64,16 @@ set colorcolumn=80  " vertical column for text width.
 " color options
 "colorscheme elflord
 "colorscheme slate
-colorscheme onehalfdark
+"colorscheme onehalfdark
 
-"set t_Co=256
-"colorscheme desert
+set t_Co=256
+colorscheme desert
 " changes to colorscheme
-"hi ColorColumn ctermbg=234
-"hi CursorLine ctermbg=234    cterm=none
-"hi CursorLineNr ctermfg=255
-"hi LineNr ctermfg=DarkGrey cterm=none
-"hi Search cterm=NONE ctermfg=white ctermbg=DarkGrey
+hi ColorColumn ctermbg=White
+hi CursorLine ctermbg=234    cterm=none
+hi CursorLineNr ctermfg=255
+hi LineNr ctermfg=DarkGrey cterm=none
+hi Search cterm=NONE ctermfg=white ctermbg=DarkGrey
 
 " Make vim recognize Y86 assembly files
 :autocmd BufNewFile,BufRead *.ys set ft=asm

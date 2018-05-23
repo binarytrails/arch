@@ -1,5 +1,11 @@
-# User services
-systemctl start --user devilspie
+# gnome-shell
+# 3.28.2-1: Not an X11 display.
+#systemctl start --user devilspie
+
+# AwesomeVM
+#exec awesome
+
+# Irssi
 systemctl start --user irssi-libnotify
 
 # Desktop widgets
