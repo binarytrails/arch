@@ -1,6 +1,7 @@
 # gnome-shell
 # 3.28.2-1: Not an X11 display.
-#systemctl start --user devilspie
+# then, you can logout and login in with Gnome Shell on XORG
+systemctl start --user devilspie
 
 # AwesomeVM
 #exec awesome
