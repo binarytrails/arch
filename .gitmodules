@@ -10,3 +10,6 @@
 [submodule "GitHub/public/tumahn.net"]
 	path = git/public/tumahn.net
 	url = https://github.com/sevaivanov/tumahn.net
+[submodule "git/public/livecoding"]
+	path = git/public/livecoding
+	url = https://github.com/sevaivanov/livecoding
