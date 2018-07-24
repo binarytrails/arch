@@ -1,13 +1,18 @@
+# touchpad
+synclient TapButton1=1
+synclient TapButton2=3
+synclient TapButton3=2
+
 # gnome-shell
 # 3.28.2-1: Not an X11 display.
 # then, you can logout and login in with Gnome Shell on XORG
 systemctl start --user devilspie
 
-# AwesomeVM
-#exec awesome
-
 # Irssi
 systemctl start --user irssi-libnotify
+
+# AwesomeVM
+#exec awesome
 
 # Desktop widgets
 #conky -qd -c ~/.conky/widgets/clock-rings/conkyrc
