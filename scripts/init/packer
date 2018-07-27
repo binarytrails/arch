@@ -1,5 +1,0 @@
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
-tar -xvf packer.tar.gz
-cd packer
-makepkg -s PKGBUILD
-sudo pacman -U $(basename $(ls packer-20*))

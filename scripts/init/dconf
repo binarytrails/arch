@@ -1,4 +1,0 @@
-for fp in $(find ~/.config/dconf/backup/org/ -type f);
-do
-    dconf load $fp/ < $fp;
-done

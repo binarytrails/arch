@@ -1,0 +1,54 @@
+# @author Vsevolod Ivanov
+
+export here=$(pwd)
+
+if [ ! -d "/home/$(whoami)/.git/" ]; then
+    echo "[git] initalizing home"
+    cd ~/
+    git init
+    git remote add origin https://github.com/sevaivanov/arch.git
+    git fetch
+    git checkout -t origin/master
+    echo "[git] updating home submodules"
+    git submodule init
+    git submodule update --recursive
+    cd $here
+fi
+
+echo "[gnome] loading configuration"
+for fp in $(find ~/.config/dconf/backup/org/ -type f); do
+    dconf load $fp/ < $fp;
+done
+
+echo "[pacman] initializing keyring"
+pacman-key --init
+pacman-key --populate archlinux
+pacman-key --refresh-keys
+
+echo "[pacman] updating the system"
+pacman --noconfirm -Syu
+
+echo "[pacman] installing missing packages"
+sudo pacman -S $(cat ~/pkg/list | grep "^[^#]") --needed --noconfirm
+
+echo "[packer] downloading aur package"
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
+tar -xvf packer.tar.gz
+echo "[packer] building its package"
+cd packer
+makepkg -s PKGBUILD
+echo "[packer] installing myself"
+sudo pacman -U $(basename $(ls packer-20*))
+echo "[packer] installing listed aur packages"
+packer -S $(cat ~/pkg/list.aur | grep "^[^#]") --noconfirm --noedit --auronly
+
+echo "[network] starting manager"
+sudo systemctl enable NetworkManager --now
+
+echo "[virtualbox] adding user to vboxusers"
+usermod -aG vboxusers $(whoami)
+echo "[virtualbox] $(whoami) in ($(groups))"
+echo "[virtualbox] starting vboxdrv kernel module"
+modprobe vboxdrv
+echo "[virtualbox] adding vboxdrv kernel module to autostart"
+sudo bash -c 'echo "vboxdrv" > /etc/modules-load.d/virtualbox.conf'

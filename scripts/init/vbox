@@ -1,2 +1,0 @@
-echo "vboxdrv" >> /etc/modules-load.d/virtualbox.conf
-usermod -aG vboxusers $(whoami)
