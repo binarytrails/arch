@@ -1,0 +1,8 @@
+[touchpad]
+natural-scroll=false
+click-method='fingers'
+speed=1.0
+tap-to-click=true
+
+[mouse]
+speed=0.98529411764705888

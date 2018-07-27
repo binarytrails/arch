@@ -1,8 +1,0 @@
-[preferences]
-button-layout='appmenu:minimize,close'
-titlebar-font='DejaVu Sans 10'
-
-[keybindings]
-switch-group=@as []
-begin-resize=['<Super>r']
-begin-move=['<Super>d']

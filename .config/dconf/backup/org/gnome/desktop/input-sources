@@ -1,0 +1,3 @@
+[/]
+sources=[('xkb', 'us'), ('xkb', 'ca'), ('xkb', 'ru')]
+xkb-options=@as []

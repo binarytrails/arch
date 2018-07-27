@@ -1,0 +1,10 @@
+[preferences]
+button-layout='appmenu:minimize,maximize,close'
+resize-with-right-button=true
+
+[keybindings]
+close=['<Super>q']
+cycle-group-backward=['<Alt><Super>Tab']
+cycle-group=['<Super>Tab']
+begin-move=['<Super>d']
+begin-resize=['<Super>r']
