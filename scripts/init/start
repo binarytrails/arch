@@ -1,0 +1,11 @@
+echo "[pacman] initializing keyring"
+~/scripts/init/./pacman
+
+echo "[pacman] updating the system"
+pacman --noconfirm -Syu
+
+echo "[pacman] installing missing packages"
+sudo pacman -S $(cat ~/pkg/list | grep "^[^#]") --needed --noconfirm
+
+echo "[packer] installing aur packages"
+packer -S $(cat ~/pkg/list.aur | grep "^[^#]") --noconfirm --noedit --auronly

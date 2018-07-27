@@ -30,9 +30,3 @@ virtualbox-host-modules-arch
 # graphics
 glu glfw-x11
 gslviewer-git
-
-# extra
-mat
-vim-plug
-conky19-lua-nv
-irssi-libnotify-git
