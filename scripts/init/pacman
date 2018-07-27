@@ -1,17 +1,3 @@
-sudo pacman -S wget devilspie cowsay fortune-mod git \
-    irssi dvtm
-
-# AUR
-CURRENT_DIR=$(pwd)
-mkdir ~/build
-cd build
-
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
-tar -xvf packer.tar.gz
-cd packer
-makepkg -s PKGBUILD
-sudo pacman -U $(basename $(ls packer-20*))
-
-packer -S --noconfirm --noedit \
-    vim-plug mat conky19-lua-nv irssi-libnotify-git
-cd $CURRENT_DIR
+pacman-key --init
+pacman-key --populate archlinux
+pacman-key --refresh-keys

@@ -1,4 +1,38 @@
-tmux
+# system
+linux-headers
 xorg-xrandr
+
+# network
+wifi-menu
+dialog
+wpa_supplicant
+networkmanager
+networkmanager-openvpn
+
+# tools
+git
+wget
+irssi
+
+# terminals
+tmux
+dvtm
+
+# styling
+devilspie
+fortune-mod
+cowsay
+
+# emulation
+virtualbox
+virtualbox-host-modules-arch
+
+# graphics
 glu glfw-x11
 gslviewer-git
+
+# extra
+mat
+vim-plug
+conky19-lua-nv
+irssi-libnotify-git

@@ -1,2 +1,0 @@
-pacman -S wifi-menu dialog wpa_supplicant \
-          networkmanager networkmanager-openvpn
