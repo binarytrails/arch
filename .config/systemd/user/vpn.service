@@ -2,7 +2,7 @@
 Description=PIA VPN
 
 [Service]
-ExecStart=/home/n0t/scripts/vpn/./nm-pia.sh "PIA - CA Montreal"
+ExecStart=/home/n0t/scripts/services/vpn "PIA - CA Montreal"
 
 [Install]
 WantedBy=default.target
