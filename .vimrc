@@ -69,8 +69,8 @@ set colorcolumn=80  " vertical column for text width.
 set t_Co=256
 colorscheme desert
 " changes to colorscheme
-hi ColorColumn ctermbg=White
-hi CursorLine ctermbg=234    cterm=none
+hi ColorColumn ctermbg=white
+hi CursorLine ctermbg=none    cterm=none
 hi CursorLineNr ctermfg=255
 hi LineNr ctermfg=DarkGrey cterm=none
 hi Search cterm=NONE ctermfg=white ctermbg=DarkGrey
