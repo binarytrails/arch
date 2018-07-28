@@ -45,6 +45,11 @@ packer -S $(cat ~/pkg/list.aur | grep "^[^#]") --noconfirm --noedit --auronly
 echo "[network] starting manager"
 sudo systemctl enable NetworkManager --now
 
+for serv in $(echo devilspie vpn irssi-libnotify); do
+    echo "[systemctl] enabling $serv user service"
+    systemctl enable $serv --user --now;
+done
+
 echo "[virtualbox] adding user to vboxusers"
 usermod -aG vboxusers $(whoami)
 echo "[virtualbox] $(whoami) in ($(groups))"
