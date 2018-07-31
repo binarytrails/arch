@@ -78,3 +78,9 @@ hi Search cterm=NONE ctermfg=white ctermbg=DarkGrey
 " Make vim recognize Y86 assembly files
 :autocmd BufNewFile,BufRead *.ys set ft=asm
 ":autocmd BufNewFile,BufRead *.ys set nosmartindent
+
+" keys overwrite
+"  delete content -> black hole register
+noremap dd "_dd
+noremap D "_D
+noremap d "_d
