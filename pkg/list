@@ -2,6 +2,9 @@
 linux-headers
 xorg-xrandr
 
+# codecs
+gst-libav # h264
+
 # network
 wifi-menu
 dialog
