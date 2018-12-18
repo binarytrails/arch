@@ -35,6 +35,7 @@ alias burp='java -jar -Xmx512m ~/opt/burpsuite_free_v1.6.01.jar &'
 alias sublime='~/opt/sublime_text_3/sublime_text'
 alias mermaid='~/opt/node_modules/mermaid/bin/mermaid.js'
 alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
+alias ofc='/usr/bin/projectGenerator -o"/opt/openFrameworks/" '
 
 # language
 alias fr='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
