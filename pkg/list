@@ -16,6 +16,7 @@ networkmanager-openvpn
 git
 wget
 irssi
+mplayer
 
 # terminals
 tmux
@@ -25,6 +26,7 @@ dvtm
 devilspie
 fortune-mod
 cowsay
+screenfetch
 
 # emulation
 virtualbox
