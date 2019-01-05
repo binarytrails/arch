@@ -95,6 +95,16 @@ function mov2mp4()
     ffmpeg -i $1 -f mp4 -vcodec copy -acodec copy $2
 }
 
+function frames2mp4()
+{
+    # $1 = input folder with frames
+    # $2 = output xxxx.mp4
+    # $3 = start frame number (e.g. 0100)
+    ffmpeg -r 24 -f image2 -s 1920x1080 \
+        -start_number $3 -i $1/%04d.png \
+        -vcodec libx264 -crf 25 -pix_fmt yuv420p $2.mp4
+}
+
 function rmfexts()
 {
     # $1 = extension; $@ (rest) = files
