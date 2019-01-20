@@ -73,7 +73,7 @@ function sprunge()
     "$@" | curl -F 'sprunge=<-' http://sprunge.us
 }
 
-function swap()         
+function swap()
 {
     local TMPFILE=tmp.$$
     mv "$1" $TMPFILE
@@ -116,3 +116,14 @@ function rmfexts()
     done
 }
 
+function pacman-reset-trust()
+{
+    rm -R /etc/pacman.d/gnupg
+    pacman-key --init
+    pacman-key --populate archlinux
+}
+
+function wget-aur-snapshot
+{
+    wget https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz
+}
