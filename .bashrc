@@ -50,6 +50,8 @@ alias getclip='xclip -selection clipboard -o'
 alias shred='shred -vzun 50'    # truly nuke a file
 alias catwn='tail -n +1'        # cat [w]ith file[n]ames
 alias php2html='wget --convert-links --mirror --adjust-extension'
+# --mirror --convert-links --adjust-extension --page-requisites --no-parent
+alias wget-mirror='wget -mkEpnp'
 
 # dev life
 alias kring='killall {dring,gnome-ring}'
