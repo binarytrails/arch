@@ -1,8 +1,8 @@
 [Unit]
-Description=irssi-libnotify-git
+Description=irssi-libnotify
 
 [Service]
-ExecStart=/usr/bin/notify-listener.py
+ExecStart=python2.7 /usr/bin/notify-listener
 
 [Install]
 WantedBy=default.target
