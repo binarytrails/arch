@@ -6,12 +6,15 @@ call plug#begin('~/.vim/plugged')
  let g:bookmark_sign = '⚑'
  let g:bookmark_highlight_lines = 1
 
- "Plug 'Valloric/YouCompleteMe'
- "let g:ycm_python_binary_path = 'python'
- "let g:ycm_seed_identifiers_with_syntax = 1
- "let g:ycm_min_num_of_chars_for_completion = 1
- "let g:ycm_autoclose_preview_window_after_completion=1
- "let g:ycm_auto_trigger = 1
+ Plug 'Valloric/YouCompleteMe'
+ let g:ycm_python_binary_path = 'python'
+ let g:ycm_seed_identifiers_with_syntax = 1
+ let g:ycm_min_num_of_chars_for_completion = 1
+ let g:ycm_autoclose_preview_window_after_completion=1
+ let g:ycm_auto_trigger = 1
+ let g:ycm_enable_diagnostic_signs = 0
+ let g:ycm_enable_diagnostic_highlighting = 0
+ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
  Plug 'davidhalter/jedi-vim'
  let g:jedi#popup_on_dot = 0
