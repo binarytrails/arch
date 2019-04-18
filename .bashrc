@@ -56,12 +56,14 @@ alias wget-mirror='wget -mkEpnp'
 # dev life
 alias kring='killall {dring,gnome-ring}'
 alias dring='SIPLOGLEVEL=0 AVLOGLEVEL=0 RING_TLS_LOGLEVEL=0 dring'
+## nm libsmth.a | demangle
+alias demangle="curl --data-urlencode input@- https://demangler.com/raw"
 
 # removes git push gnome widget
 unset SSH_ASKPASS
 
 # wiki-browser-html
-export wiki_browser=firefox
+export wiki_browser=epiphany
 
 # welcome ascii drawing with text
 RANDOM=$$$(date +%s)
