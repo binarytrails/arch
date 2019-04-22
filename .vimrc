@@ -14,6 +14,10 @@ call plug#begin('~/.vim/plugged')
  let g:ycm_auto_trigger = 1
  let g:ycm_enable_diagnostic_signs = 0
  let g:ycm_enable_diagnostic_highlighting = 0
+ let g:ycm_collect_identifiers_from_tags_files = 1
+ let g:ycm_seed_identifiers_with_syntax = 1
+ "let g:ycm_server_log_level = 'debug'
+ let g:ycm_semantic_triggers =  { 'cpp' : ['->', '.', '::','re!gl'], 'c' : ['->', '.','re!xml']}
  let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
  Plug 'davidhalter/jedi-vim'
@@ -87,3 +91,6 @@ hi Search cterm=NONE ctermfg=white ctermbg=DarkGrey
 noremap dd "_dd
 noremap D "_D
 noremap d "_d
+" youcompleteme
+"   ctrl+o (go back), ctrl+i (forward)
+nnoremap jd :YcmCompleter GoTo<CR>
