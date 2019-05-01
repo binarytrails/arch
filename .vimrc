@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
- 
+
  Plug 'MattesGroeger/vim-bookmarks'
  highlight BookmarkSign ctermbg=NONE ctermfg=160
  highlight BookmarkLine ctermbg=194 ctermfg=NONE
@@ -50,6 +50,8 @@ set mouse=a                 " use mouse to navigate the file.
 set clipboard=unnamedplus   " enables in vim from gvim VISUAL y -> clipboard
 "set paste                  " no incremented tabs per line from paste;
                             " commented to enable Vundle TAB completion.
+set timeoutlen=0            " ms mapping delay
+set ttimeoutlen=0           " ms keycode delay
 
 set shell=/bin/bash  " shell to use.
 syntax on            " color syntax highlighting.
