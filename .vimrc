@@ -50,7 +50,7 @@ set mouse=a                 " use mouse to navigate the file.
 set clipboard=unnamedplus   " enables in vim from gvim VISUAL y -> clipboard
 "set paste                  " no incremented tabs per line from paste;
                             " commented to enable Vundle TAB completion.
-set timeoutlen=0            " ms mapping delay
+set timeoutlen=200          " ms mapping delay
 set ttimeoutlen=0           " ms keycode delay
 
 set shell=/bin/bash  " shell to use.
@@ -94,5 +94,5 @@ noremap dd "_dd
 noremap D "_D
 noremap d "_d
 " youcompleteme
-"   ctrl+o (go back), ctrl+i (forward)
+"   jd (go to definition) ctrl+o (go back), ctrl+i (forward)
 nnoremap jd :YcmCompleter GoTo<CR>
