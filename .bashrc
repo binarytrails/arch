@@ -31,7 +31,7 @@ alias rnm='sudo systemctl restart NetworkManager'
 alias cnm='sudo vim /etc/NetworkManager/NetworkManager.conf'
 
 # various opt
-alias burp='java -jar -Xmx512m ~/opt/burpsuite_free_v1.6.01.jar &'
+alias burp='java -jar -Xmx512m /usr/share/burpsuite/burpsuite.jar &'
 alias sublime='~/opt/sublime_text_3/sublime_text'
 alias mermaid='~/opt/node_modules/mermaid/bin/mermaid.js'
 alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
