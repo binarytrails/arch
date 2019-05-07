@@ -12,3 +12,5 @@ systemctl start devilspie --user
 # Desktop widgets
 #conky -qd -c ~/.conky/widgets/clock-rings/conkyrc
 #conky -qd -c ~/.conky/widgets/sysinfo/conkyrc
+
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
