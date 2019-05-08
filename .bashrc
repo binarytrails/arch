@@ -13,6 +13,7 @@ PS1='\[\e[2;49;37m\]\u\[\e[2;49;39m\] \W \[\e[1;00m\]$\[\e[0m\] '
 export HISTCONTROL=ignorespace
 export EDITOR=vim
 export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 alias j='jobs'
 alias f='fg'
