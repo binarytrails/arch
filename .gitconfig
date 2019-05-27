@@ -8,3 +8,5 @@
 [alias]
 	adog = log --all --decorate --oneline --graph
 	adog2 = log --graph --abbrev-commit --decorate --date=relative --all
+[merge]
+	tool = meld
