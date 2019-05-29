@@ -11,6 +11,9 @@ dialog
 wpa_supplicant
 networkmanager
 networkmanager-openvpn
+bind-tools # dig
+iputils # tracepath
+whois
 
 # tools
 git
