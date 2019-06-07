@@ -59,6 +59,7 @@ alias kring='killall {dring,gnome-ring}'
 alias dring='SIPLOGLEVEL=0 AVLOGLEVEL=0 RING_TLS_LOGLEVEL=0 dring'
 ## nm libsmth.a | demangle
 alias demangle="curl --data-urlencode input@- https://demangler.com/raw"
+alias memcheck="valgrind --leak-check=full --read-var-info=yes -v "
 
 # removes git push gnome widget
 unset SSH_ASKPASS
