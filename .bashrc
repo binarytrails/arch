@@ -133,3 +133,9 @@ function wget-aur-snapshot
 {
     wget https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz
 }
+
+function rsed
+{
+    echo "replacing recursively $2 by $3 from $1";
+    find $1 -type f -name "*" -print0 | xargs -0 sed -i '' -e "s/$2/$3/g"
+}
