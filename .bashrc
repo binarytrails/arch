@@ -139,3 +139,9 @@ function rsed
     echo "replacing recursively $2 by $3 from $1";
     find $1 -type f -name "*" -print0 | xargs -0 sed -i '' -e "s/$2/$3/g"
 }
+
+function git-lines-count
+{
+    # $1 = regex i.e. *.cpp *h
+    git ls-files $@ | xargs wc -l
+}
