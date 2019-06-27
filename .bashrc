@@ -60,6 +60,7 @@ alias jami-daemon='SIPLOGLEVEL=0 AVLOGLEVEL=0 RING_TLS_LOGLEVEL=0 /usr/lib/ring/
 ## nm libsmth.a | demangle
 alias demangle="curl --data-urlencode input@- https://demangler.com/raw"
 alias memcheck="valgrind --leak-check=full --read-var-info=yes -v "
+alias gerrit-push-master="git push origin HEAD:refs/for/master"
 
 # removes git push gnome widget
 unset SSH_ASKPASS
