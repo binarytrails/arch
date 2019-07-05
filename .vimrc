@@ -68,7 +68,7 @@ set sw=2            " set soft tab.
 set tabstop=4       " tab equals to n spaces.
 set expandtab       " expand a tab to spaces.
 set shiftwidth=4    " set autoindent to one tab.
-set colorcolumn=80  " vertical column for text width.
+set colorcolumn=100 " vertical column for text width.
 
 " color options
 "colorscheme elflord
