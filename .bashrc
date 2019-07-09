@@ -53,6 +53,7 @@ alias catwn='tail -n +1'        # cat [w]ith file[n]ames
 alias php2html='wget --convert-links --mirror --adjust-extension'
 # --mirror --convert-links --adjust-extension --page-requisites --no-parent
 alias wget-mirror='wget -mkEpnp'
+alias curl-json='curl -H "Content-Type: application/json"'
 
 # dev life
 alias kill-jami='killall {dring,gnome-ring,jami,jami-gnome,jami-daemon}'
