@@ -106,6 +106,8 @@ set confirm off
 set verbose off
 set history filename ~/.gdb_history
 set history save
+# print all of the content
+set print elements 0
 
 set output-radix 0x10
 set input-radix 0x10
