@@ -65,6 +65,7 @@ alias gerrit-push-master="git push origin HEAD:refs/for/master"
 
 # human life
 alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(date +%u) + 2)) \"entry-content\" | tail -n1 | sed 's/.*: //' | sed 's/<\/p>//g'"
+function meteo () { [[ $1 ]] && curl wttr.in/$1 || curl wttr.in/Montréal; }
 
 # removes git push gnome widget
 unset SSH_ASKPASS
