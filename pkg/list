@@ -21,6 +21,7 @@ git
 wget
 irssi
 mplayer
+sdcv
 
 # terminals
 tmux
