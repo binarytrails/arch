@@ -15,6 +15,14 @@ export EDITOR=vim
 export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin:~/go/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
+# android
+export JAVA_HOME=/usr/lib/jvm/default/jre
+export ANDROID_HOME=/opt/android-sdk
+export ANDROID_SDK=/opt/android-sdk
+export ANDROID_NDK_ROOT=/opt/android-ndk
+export ANDROID_NDK=/opt/android-ndk
+export PATH=$PATH:$PATH:$ANDROID_HOME/tools:$ANDROID_NDK:$ANDROID_NDK:$JAVA_HOME/bin
+
 alias j='jobs'
 alias f='fg'
 alias l='ls --color=auto'
