@@ -63,6 +63,7 @@ alias php2html='wget --convert-links --mirror --adjust-extension'
 alias wget-mirror='wget -mkEpnp'
 alias curl-json='curl -H "Content-Type: application/json"'
 alias gtm_date='TZ=GTM date'
+alias docker-flush="docker rm $(docker ps -a -q) && docker rmi $(docker images -q)"
 
 # dev life
 alias kill-jami='killall {dring,gnome-ring,jami,jami-gnome,jami-daemon}'
@@ -73,6 +74,7 @@ alias memcheck="valgrind --leak-check=full --read-var-info=yes -v "
 alias gerrit-push-master="git push origin HEAD:refs/for/master"
 
 # human life
+alias emojis="cat ~/notes/misc/emojis.md | grep :"
 alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(date +%u) + 2)) \"entry-content\" | tail -n1 | sed 's/.*: //' | sed 's/<\/p>//g'"
 function meteo () { [[ $1 ]] && curl wttr.in/$1 || curl wttr.in/Montréal; }
 
