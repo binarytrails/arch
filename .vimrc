@@ -37,6 +37,8 @@ call plug#end()
 
 set omnifunc=syntaxcomplete#Complete "YCM ctrl+space fix attempt
 
+let g:go_highlight_trailing_whitespace_error = 0
+
 " options
 set number                  " line numbers on the left.
 set nocompatible            " no vi compatibility.
