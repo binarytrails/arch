@@ -12,7 +12,7 @@ PS1='\[\e[2;49;37m\]\u\[\e[2;49;39m\] \W \[\e[1;00m\]$\[\e[0m\] '
 # do not put in history if starts with space
 export HISTCONTROL=ignorespace
 export EDITOR=vim
-export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin:~/go/bin"
+export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin:~/go/bin:/home/n0t/.gem/ruby/2.6.0/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # android
@@ -45,6 +45,7 @@ alias sublime='~/opt/sublime_text_3/sublime_text'
 alias mermaid='~/opt/node_modules/mermaid/bin/mermaid.js'
 alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
 alias ofx-project='/usr/bin/projectGenerator -o"/opt/openFrameworks/" '
+alias ipwhois='python /usr/bin/ipwhois_cli.py --hr --show_name --colorize --depth 1 --addr'
 
 # language
 alias fr='sdcv -u "Dictionnaire de l’Académie Française, 6ème édition (1835)."'
