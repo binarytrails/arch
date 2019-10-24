@@ -14,6 +14,7 @@ networkmanager-openvpn
 bind-tools # dig
 iputils # tracepath
 whois
+gnu-netcat
 bluez-utils
 
 # tools
