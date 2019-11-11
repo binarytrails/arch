@@ -68,6 +68,7 @@ alias docker-flush="docker rm $(docker ps -a -q) && docker rmi $(docker images -
 
 # dev life
 alias kill-jami='killall {dring,gnome-ring,jami,jami-gnome,jami-daemon}'
+alias jami-gnome='/usr/local/bin/jami-gnome'
 alias jami-daemon='SIPLOGLEVEL=0 AVLOGLEVEL=0 RING_TLS_LOGLEVEL=0 /usr/lib/ring/dring -d -c'
 ## nm libsmth.a | demangle
 alias demangle="curl --data-urlencode input@- https://demangler.com/raw"
