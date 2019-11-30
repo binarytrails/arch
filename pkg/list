@@ -1,18 +1,19 @@
 # system
 linux-headers
 xorg-xrandr
+9base
 
 # codecs
-gst-libav # h264
+gst-libav
 
 # network
-wifi-menu
+netctl
 dialog
 wpa_supplicant
 networkmanager
 networkmanager-openvpn
-bind-tools # dig
-iputils # tracepath
+bind-tools
+iputils
 whois
 gnu-netcat
 bluez-utils
@@ -35,9 +36,6 @@ cowsay
 screenfetch
 
 # emulation
-virtualbox
-virtualbox-host-modules-arch
 
 # graphics
 glu glfw-x11
-gslviewer-git
