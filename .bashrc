@@ -44,6 +44,7 @@ alias burp='java -jar -Xmx512m /usr/share/burpsuite/burpsuite.jar &'
 alias sublime='~/opt/sublime_text_3/sublime_text'
 alias mermaid='~/opt/node_modules/mermaid/bin/mermaid.js'
 alias text2pdf='~/opt/text2pdf/./text2pdf -s11 -v15'
+alias topdf='unoconv -f pdf'
 alias ofx-project='/usr/bin/projectGenerator -o"/opt/openFrameworks/" '
 alias ipwhois='python /usr/bin/ipwhois_cli.py --hr --show_name --colorize --depth 1 --addr'
 
