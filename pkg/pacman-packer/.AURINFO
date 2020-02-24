@@ -1,4 +1,4 @@
-pkgbase = packer
+pkgbase = pacman-packer
 	pkgdesc = Bash wrapper for pacman and aur
 	pkgver = 20140810
 	pkgrel = 1
@@ -17,5 +17,5 @@ pkgbase = packer
 	optdepends = customizepkg: apply customizepkg modifications
 	source = git+https://github.com/keenerd/packer.git
 
-pkgname = packer
+pkgname = pacman-packer
 

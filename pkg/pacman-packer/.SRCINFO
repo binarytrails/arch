@@ -1,4 +1,4 @@
-pkgbase = packer
+pkgbase = pacman-packer
 	pkgdesc = Bash wrapper for pacman and aur
 	pkgver = 20150808
 	pkgrel = 1
@@ -18,5 +18,5 @@ pkgbase = packer
 	source = git+https://github.com/keenerd/packer.git
 	md5sums = SKIP
 
-pkgname = packer
+pkgname = pacman-packer
 

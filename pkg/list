@@ -30,6 +30,7 @@ pdfgrep
 # terminals
 tmux
 dvtm
+bat
 
 # styling
 devilspie
@@ -41,3 +42,5 @@ screenfetch
 
 # graphics
 glu glfw-x11
+transmission-gtk
+android-tools
