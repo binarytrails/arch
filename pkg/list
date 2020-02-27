@@ -15,6 +15,7 @@ networkmanager-openvpn
 bind-tools
 iputils
 whois
+nmap
 gnu-netcat
 bluez-utils
 
