@@ -166,3 +166,9 @@ function git-lines-count
     # $1 = regex i.e. *.cpp *h
     git ls-files $@ | xargs wc -l
 }
+
+function page-urls-to-pdfs
+{
+    # $1 = <output folder>; $2 = "<url>"; $3 = "<grep url pattern>"
+    mkdir -p $1 && lynx -dump -listonly -nonumbers $2 | grep $3 | parallel --tag "echo {} 2> /dev/null | sed 's/\///g' 2>/dev/null | xargs -t -i[] google-chrome-stable --disable-gpu --headless --print-to-pdf=$1/[].pdf {}"
+}
