@@ -18,6 +18,7 @@ whois
 nmap
 gnu-netcat
 bluez-utils
+etherape
 
 # tools
 git
@@ -44,4 +45,10 @@ screenfetch
 # graphics
 glu glfw-x11
 transmission-gtk
+
+# mobile
 android-tools
+
+# viewers
+zathura
+zathura-pdf-mupdf
