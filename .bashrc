@@ -80,6 +80,7 @@ alias gerrit-push-master="git push origin HEAD:refs/for/master"
 # human life
 alias emojis="cat ~/notes/misc/emojis.md | grep :"
 alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(date +%u) + 2)) \"entry-content\" | tail -n1 | sed 's/.*: //' | sed 's/<\/p>//g'"
+alias c19today="curl https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/$(date +%x | sed "s/\//-/g").csv 2>&1 | grep Montreal"
 function meteo () { [[ $1 ]] && curl wttr.in/$1 || curl wttr.in/Montréal; }
 
 # removes git push gnome widget
