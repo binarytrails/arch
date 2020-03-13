@@ -82,6 +82,7 @@ alias emojis="cat ~/notes/misc/emojis.md | grep :"
 alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(date +%u) + 2)) \"entry-content\" | tail -n1 | sed 's/.*: //' | sed 's/<\/p>//g'"
 # $1 = place or any pattern of grep, $2 = n days ago, if none than yesterday
 function c19 () { curl https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/$(date --date=$2\ days\ ago +%x | sed "s/\//-/g").csv 2>&1 | grep -i $1; }
+function c19qc () { curl https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov/ --silent | grep "<li>[^<].*cas" | sed -e 's/<[^>]*>//g' | sed 's/^[ \t]*//;s/[ \t]*$//'; }
 function meteo () { [[ $1 ]] && curl wttr.in/$1 || curl wttr.in/Montréal; }
 
 # removes git push gnome widget
