@@ -84,6 +84,7 @@ alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(d
 function c19 () { curl https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/$(date --date=$2\ days\ ago +%x | sed "s/\//-/g").csv 2>&1 | grep -i $1; }
 function c19qc () { curl https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov/ --silent | grep "<li>[^<].*cas" | sed -e 's/<[^>]*>//g' | sed 's/^[ \t]*//;s/[ \t]*$//'; }
 function meteo () { [[ $1 ]] && curl wttr.in/$1 || curl wttr.in/Montréal; }
+function curl-cve-search () { curl "https://cve.circl.lu/api/cve/$1"; }
 
 # removes git push gnome widget
 unset SSH_ASKPASS
