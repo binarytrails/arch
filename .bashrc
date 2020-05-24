@@ -67,6 +67,7 @@ alias curl-json='curl -H "Content-Type: application/json"'
 alias gtm_date='TZ=GTM date'
 alias docker-flush="docker rm $(docker ps -a -q) && docker rmi $(docker images -q)"
 alias cloneos="rsync -aAXv --update --delete --exclude '~/.config/cloneos_excludes.list' / " # ./folder
+alias rsync-backup="rsync -aAXv --update --delete"
 
 # dev life
 alias kill-jami='killall {dring,gnome-ring,jami,jami-gnome,jami-daemon}'
