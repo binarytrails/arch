@@ -1,15 +1,9 @@
-[submodule "notes"]
-	path = git/public/notes
-	url = https://github.com/sevaivanov/notes
 [submodule ".conky/widgets"]
 	path = .conky/widgets
-	url = https://github.com/sevaivanov/conky-widgets
-[submodule "GitHub/public/small-projects"]
-	path = git/public/small-projects
-	url = https://github.com/sevaivanov/small-projects
-[submodule "GitHub/public/tumahn.net"]
-	path = git/public/tumahn.net
-	url = https://github.com/sevaivanov/tumahn.net
+	url = https://github.com/binarytrails/conky-widgets
+[submodule "GitHub/public/various"]
+	path = git/public/various
+	url = https://github.com/binarytrails/various
 [submodule "git/public/livecoding"]
 	path = git/public/livecoding
-	url = https://github.com/sevaivanov/livecoding
+	url = https://github.com/binarytrails/livecoding
