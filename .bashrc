@@ -32,6 +32,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias mocp='mocp --music-dir --theme=transparent-background'
 alias pandoc='pandoc --variable urlcolor=cyan'
+alias markdown='python -m rich.markdown'
 
 # network-manager (see: *nmcli* for more)
 alias qnm='systemctl status NetworkManager'
@@ -176,4 +177,14 @@ function page-urls-to-pdfs
 {
     # $1 = <output folder>; $2 = "<url>"; $3 = "<grep url pattern>"
     mkdir -p $1 && lynx -dump -listonly -nonumbers $2 | grep $3 | parallel --tag "echo {} 2> /dev/null | sed 's/\///g' 2>/dev/null | xargs -t -i[] google-chrome-stable --disable-gpu --headless --print-to-pdf=$1/[].pdf {}"
+}
+
+xcopy()
+{
+    cat | xclip -selection clipboard
+}
+
+xpaste()
+{
+    xclip -selection clipboard -o
 }
