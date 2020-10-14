@@ -50,6 +50,8 @@ for serv in $(echo devilspie vpn irssi-libnotify); do
     systemctl enable $serv --user --now;
 done
 
+echo "[virtualbox] downloading linux headers"
+sudo pacman -S linux-headers
 echo "[virtualbox] adding user to vboxusers"
 usermod -aG vboxusers $(whoami)
 echo "[virtualbox] $(whoami) in ($(groups))"
@@ -57,3 +59,5 @@ echo "[virtualbox] starting vboxdrv kernel module"
 modprobe vboxdrv
 echo "[virtualbox] adding vboxdrv kernel module to autostart"
 sudo bash -c 'echo "vboxdrv" > /etc/modules-load.d/virtualbox.conf'
+echo "[virtualbox] reloading virtualbox"
+sudo vboxreload
