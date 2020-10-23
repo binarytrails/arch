@@ -19,6 +19,7 @@ nmap
 gnu-netcat
 bluez-utils
 etherape
+nethogs
 
 # tools
 git
