@@ -14,3 +14,7 @@ systemctl start devilspie --user
 #conky -qd -c ~/.conky/widgets/sysinfo/conkyrc
 
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+
+
+# Monitoring
+nohup opensnitch-ui > /dev/null &
