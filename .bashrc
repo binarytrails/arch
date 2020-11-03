@@ -79,6 +79,11 @@ alias demangle="curl --data-urlencode input@- https://demangler.com/raw"
 alias memcheck="valgrind --leak-check=full --read-var-info=yes -v "
 alias gerrit-push-master="git push origin HEAD:refs/for/master"
 
+# secops
+function cve-search-circl () { curl "https://cve.circl.lu/api/cve/$1"; }
+function cve-search-arch () { elinks "https://security.archlinux.org/$1"; }
+function grep-nmap-vuln-exploit () { cat /usr/share/nmap/scripts/script.db | grep '"vuln"\|"exploit"'; }
+
 # human life
 alias emojis="cat ~/notes/misc/emojis.md | grep :"
 alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(date +%u) + 2)) \"entry-content\" | tail -n1 | sed 's/.*: //' | sed 's/<\/p>//g'"
@@ -86,8 +91,6 @@ alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(d
 function c19 () { curl https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/$(date --date=$2\ days\ ago +%x | sed "s/\//-/g").csv 2>&1 | grep -i $1; }
 function c19qc () { curl https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov/ --silent | grep "<li>[^<].*cas" | sed -e 's/<[^>]*>//g' | sed 's/^[ \t]*//;s/[ \t]*$//'; }
 function meteo () { [[ $1 ]] && curl wttr.in/$1 || curl wttr.in/Montréal; }
-function cve-search-circl () { curl "https://cve.circl.lu/api/cve/$1"; }
-function cve-search-arch () { elinks "https://security.archlinux.org/$1"; }
 
 # removes git push gnome widget
 unset SSH_ASKPASS
