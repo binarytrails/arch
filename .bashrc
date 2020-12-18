@@ -78,6 +78,7 @@ alias jami-daemon='SIPLOGLEVEL=0 AVLOGLEVEL=0 RING_TLS_LOGLEVEL=0 /usr/lib/ring/
 alias demangle="curl --data-urlencode input@- https://demangler.com/raw"
 alias memcheck="valgrind --leak-check=full --read-var-info=yes -v "
 alias gerrit-push-master="git push origin HEAD:refs/for/master"
+alias vbox='/usr/lib/virtualbox/VirtualBoxVM --startvm'
 
 # secops
 function cve-search-circl () { curl "https://cve.circl.lu/api/cve/$1"; }
