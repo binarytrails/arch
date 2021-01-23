@@ -79,6 +79,7 @@ alias demangle="curl --data-urlencode input@- https://demangler.com/raw"
 alias memcheck="valgrind --leak-check=full --read-var-info=yes -v "
 alias gerrit-push-master="git push origin HEAD:refs/for/master"
 alias vbox='/usr/lib/virtualbox/VirtualBoxVM --startvm'
+alias vim-shred-history=' shred -vzun 50 ~/.viminfo'
 
 # secops
 function cve-search-circl () { curl "https://cve.circl.lu/api/cve/$1"; }
