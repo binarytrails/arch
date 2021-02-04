@@ -59,6 +59,7 @@ alias setclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
 
 # handy
+alias gtfo='sudo shutdown now'
 alias shred='shred -vzun 50'    # truly nuke a file
 alias catwn='tail -n +1'        # cat [w]ith file[n]ames
 alias php2html='wget --convert-links --mirror --adjust-extension'
@@ -105,6 +106,8 @@ RANDOM=$$$(date +%s)
 COWS=($(basename --suffix=.cow $(ls -1 /usr/share/cows)))
 COW=$(echo ${COWS[RANDOM % ${#COWS[@]}]})
 cowsay -f $COW $(fortune); echo
+# ascii: part 2
+alias bonsai='/usr/bin/cbonsai --seed $RANDOM -p -m "$(fortune)" -M 2 -l -t 0.006'
 
 # paste it
 function sprunge()
