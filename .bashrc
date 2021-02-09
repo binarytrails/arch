@@ -82,6 +82,11 @@ alias gerrit-push-master="git push origin HEAD:refs/for/master"
 alias vbox='/usr/lib/virtualbox/VirtualBoxVM --startvm'
 alias vim-shred-history=' shred -vzun 50 ~/.viminfo'
 
+# devilspie
+alias devilspie-restart='systemctl restart devilspie --user'
+alias devilspie-opaque="sed -i -e 's/85/100/g' ~/.devilspie/gnome-terminal.ds && devilspie-restart"
+alias devilspie-transparent="sed -i -e 's/100/85/g' ~/.devilspie/gnome-terminal.ds && devilspie-restart"
+
 # secops
 function cve-search-circl () { curl "https://cve.circl.lu/api/cve/$1"; }
 function cve-search-arch () { elinks "https://security.archlinux.org/$1"; }
