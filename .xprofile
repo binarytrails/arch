@@ -17,4 +17,4 @@ PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 
 # Monitoring
-nohup opensnitch-ui > /dev/null &
+nohup /usr/bin/opensnitch-ui > /dev/null &
