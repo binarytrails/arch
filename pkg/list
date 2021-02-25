@@ -2,6 +2,7 @@
 linux-headers
 xorg-xrandr
 9base
+dmidecode
 
 # codecs
 gst-libav
@@ -29,6 +30,7 @@ mplayer
 sdcv
 ascii
 pdfgrep
+d-feet
 
 # terminals
 tmux

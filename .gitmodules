@@ -1,9 +1,0 @@
-[submodule ".conky/widgets"]
-	path = .conky/widgets
-	url = https://github.com/binarytrails/conky-widgets
-[submodule "GitHub/public/various"]
-	path = git/public/various
-	url = https://github.com/binarytrails/various
-[submodule "git/public/livecoding"]
-	path = git/public/livecoding
-	url = https://github.com/binarytrails/livecoding
