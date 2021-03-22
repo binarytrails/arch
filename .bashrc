@@ -94,6 +94,7 @@ function grep-nmap-vuln-exploit () { cat /usr/share/nmap/scripts/script.db | gre
 # human life
 alias emojis="cat ~/notes/misc/emojis.md | grep :"
 alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(date +%u) + 2)) \"entry-content\" | tail -n1 | sed 's/.*: //' | sed 's/<\/p>//g'"
+alias bonsai='/usr/bin/cbonsai --seed $RANDOM -p -m "$(fortune)" -M 2 -l -t 0.006'
 # $1 = place or any pattern of grep, $2 = n days ago, if none than yesterday
 function c19 () { curl https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/$(date --date=$2\ days\ ago +%x | sed "s/\//-/g").csv 2>&1 | grep -i $1; }
 function c19qc () { curl https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov/ --silent | grep "<li>[^<].*cas" | sed -e 's/<[^>]*>//g' | sed 's/^[ \t]*//;s/[ \t]*$//'; }
@@ -106,12 +107,13 @@ unset SSH_ASKPASS
 export wiki_browser=epiphany
 
 # welcome ascii drawing with text
-RANDOM=$$$(date +%s)
-COWS=($(basename --suffix=.cow $(ls -1 /usr/share/cows)))
-COW=$(echo ${COWS[RANDOM % ${#COWS[@]}]})
-cowsay -f $COW $(fortune); echo
-# ascii: part 2
-alias bonsai='/usr/bin/cbonsai --seed $RANDOM -p -m "$(fortune)" -M 2 -l -t 0.006'
+function banner()
+{
+    RANDOM=$$$(date +%s)
+    COWS=($(basename --suffix=.cow $(ls -1 /usr/share/cows)))
+    COW=$(echo ${COWS[RANDOM % ${#COWS[@]}]})
+    cowsay -f $COW $(fortune) && echo "- $COW";
+}
 
 # paste it
 function sprunge()
@@ -207,3 +209,11 @@ function docker-flush
     docker rm $(docker ps -a -q);
     docker rmi $(docker images -q);
 }
+
+# Garbage
+killall tracker-miner-fs-4 &>/dev/null
+
+# Startup
+#meteo
+banner
+date
