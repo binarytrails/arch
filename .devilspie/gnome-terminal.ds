@@ -2,7 +2,7 @@
 	(is (application_name) "Terminal")
 	(begin
         (center)
-        (opacity 85)
+        (opacity 80)
         (undecorate)
         (geometry "790x480")
     )
