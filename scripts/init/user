@@ -7,11 +7,12 @@ if [ ! -d "/home/$(whoami)/.git/" ]; then
     cd ~/
     git init
     git remote add origin https://github.com/sevaivanov/arch.git
+    echo "avoiding overwritten by merge conflict"
+    mv .bashrc .bashrc.orig
+    echo "avoiding stdout highjack"
+    pacman -S cowsay fortune-mod --noconfirm
     git fetch
     git checkout -t origin/master
-    echo "[git] updating home submodules"
-    git submodule init
-    git submodule update --recursive
     cd $here
 fi
 
@@ -31,15 +32,14 @@ pacman --noconfirm -Syu
 echo "[pacman] installing missing packages"
 sudo pacman -S $(cat ~/pkg/list | grep "^[^#]") --needed --noconfirm
 
-echo "[packer] downloading aur package"
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/packer.tar.gz
-tar -xvf packer.tar.gz
-echo "[packer] building its package"
-cd packer
+echo "[arch-user-repository] installing dependencies"
+pacman -S base-devel
+echo "[pacman-packer] building its package"
+cd ~/pkg/aur/pacman-packer/
 makepkg -s PKGBUILD
-echo "[packer] installing myself"
+echo "[pacman-packer] installing myself"
 sudo pacman -U $(basename $(ls packer-20*))
-echo "[packer] installing listed aur packages"
+echo "[pacman-packer] installing listed aur packages"
 packer -S $(cat ~/pkg/list.aur | grep "^[^#]") --noconfirm --noedit --auronly
 
 echo "[network] starting manager"
@@ -50,13 +50,15 @@ for serv in $(echo devilspie vpn irssi-libnotify); do
     systemctl enable $serv --user --now;
 done
 
+echo "[virtualbox] downloading virtualbox"
+sudo pacman -S virtualbox virtualbox-host-dkms --noconfirm
 echo "[virtualbox] downloading linux headers"
-sudo pacman -S linux-headers
+sudo pacman -S linux linux-headers --noconfirm
 echo "[virtualbox] adding user to vboxusers"
-usermod -aG vboxusers $(whoami)
+sudo usermod -aG vboxusers $(whoami)
 echo "[virtualbox] $(whoami) in ($(groups))"
 echo "[virtualbox] starting vboxdrv kernel module"
-modprobe vboxdrv
+sudo modprobe vboxdrv
 echo "[virtualbox] adding vboxdrv kernel module to autostart"
 sudo bash -c 'echo "vboxdrv" > /etc/modules-load.d/virtualbox.conf'
 echo "[virtualbox] reloading virtualbox"
