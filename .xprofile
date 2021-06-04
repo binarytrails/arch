@@ -19,4 +19,4 @@ PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 killall tracker-miner-fs-4
 
 # Monitoring
-nohup /usr/bin/opensnitch-ui > /dev/null &
+#nohup /usr/bin/opensnitch-ui > /dev/null &
