@@ -6,7 +6,7 @@ if [ ! -d "/home/$(whoami)/.git/" ]; then
     echo "[git] initalizing home"
     cd ~/
     git init
-    git remote add origin https://github.com/sevaivanov/arch.git
+    git remote add origin git@github.com:binarytrails/arch.git
     echo "avoiding overwritten by merge conflict"
     mv .bashrc .bashrc.orig
     echo "avoiding stdout highjack"
