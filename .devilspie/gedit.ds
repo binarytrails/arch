@@ -1,0 +1,9 @@
+(if
+	(is (application_name) "gedit")
+	(begin
+        (center)
+        (opacity 95)
+        (undecorate)
+        (geometry "790x480")
+    )
+)
