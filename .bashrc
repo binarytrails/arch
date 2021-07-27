@@ -79,7 +79,9 @@ alias demangle="curl --data-urlencode input@- https://demangler.com/raw"
 alias memcheck="valgrind --leak-check=full --read-var-info=yes -v "
 alias gerrit-push-master="git push origin HEAD:refs/for/master"
 alias vbox='/usr/lib/virtualbox/VirtualBoxVM --startvm'
-alias vim-shred-history=' shred -vzun 50 ~/.viminfo'
+
+# cleanup
+alias clear-history=' shred -vzun 50 ~/.viminfo ~/.bash_history && echo -n '' > ~/.local/share/recently-used.xbel'
 
 # devilspie
 alias devilspie-restart='systemctl restart devilspie --user'
