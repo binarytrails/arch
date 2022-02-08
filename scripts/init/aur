@@ -1,0 +1,14 @@
+mkdir -p ~/build
+cd ~/build/
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -s
+sudo pacman -U yay-*.pkg.tar.zst 
+cd ~/build
+git clone https://aur.archlinux.org/aurutils.git 
+cd aurutils/
+makepkg -s
+sudo pacman -U aurutils-*.pkg.tar.zst 
+pacman -Ql aurutils | grep aurutils/aur-
+echo "Don't forget to add /usr/lib/aurutils to the PATH"
+cd ~/build
