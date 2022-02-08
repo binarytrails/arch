@@ -2,7 +2,7 @@
 	(is (application_name) "gedit")
 	(begin
         (center)
-        (opacity 95)
+        (opacity 100)
         (undecorate)
         (geometry "790x480")
     )
