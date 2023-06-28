@@ -20,3 +20,5 @@ killall tracker-miner-fs-4
 
 # Monitoring
 nohup /usr/bin/opensnitch-ui > /dev/null &
+systemctl stop archlinux-keyring-wkd-sync.timer
+systemctl stop archlinux-keyring-wkd-sync
