@@ -28,11 +28,13 @@ alias f='fg'
 alias l='ls --color=auto'
 alias tj='journalctl -xr -S today -U tomorrow'      # today journal
 
+alias vsudo="pkexec"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias mocp='mocp --music-dir --theme=transparent-background'
 alias pandoc='pandoc --variable urlcolor=cyan'
 alias markdown='python -m rich.markdown'
+alias pdfsearch="pdfgrep -Ri"
 
 # network-manager (see: *nmcli* for more)
 alias qnm='systemctl status NetworkManager'
