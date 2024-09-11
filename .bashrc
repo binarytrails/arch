@@ -219,5 +219,5 @@ killall tracker-miner-fs-4 &>/dev/null
 
 # Startup
 #meteo
-banner
+#banner
 date
