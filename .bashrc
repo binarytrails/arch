@@ -66,7 +66,7 @@ alias shred='shred -vzun 50'    # truly nuke a file
 alias catwn='tail -n +1'        # cat [w]ith file[n]ames
 alias php2html='wget --convert-links --mirror --adjust-extension'
 # --mirror --convert-links --adjust-extension --page-requisites --no-parent
-alias wget-mirror='wget -mkEpnp'
+alias wget-mirror='wget -mkEpnp --no-check-certificate --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0"'
 alias curl-json='curl -H "Content-Type: application/json"'
 alias gtm_date='TZ=GTM date'
 alias cloneos="rsync -aAXv --update --delete --exclude '~/.config/cloneos_excludes.list' / " # ./folder
