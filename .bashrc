@@ -12,7 +12,7 @@ PS1='\[\e[2;49;37m\]\u\[\e[2;49;39m\] \W \[\e[1;00m\]$\[\e[0m\] '
 # do not put in history if starts with space
 export HISTCONTROL=ignorespace
 export EDITOR=vim
-export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin:~/go/bin:/home/n0t/.gem/ruby/2.6.0/bin:/usr/lib/aurutils"
+export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin:~/go/bin:/home/n0t/.gem/ruby/2.6.0/bin:/opt/google-cloud-cli/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # android
@@ -28,13 +28,12 @@ alias f='fg'
 alias l='ls --color=auto'
 alias tj='journalctl -xr -S today -U tomorrow'      # today journal
 
-alias vsudo="pkexec"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias mocp='mocp --music-dir --theme=transparent-background'
 alias pandoc='pandoc --variable urlcolor=cyan'
 alias markdown='python -m rich.markdown'
-alias pdfsearch="pdfgrep -Ri"
+alias exiftool='/usr/bin/vendor_perl/exiftool'
 
 # network-manager (see: *nmcli* for more)
 alias qnm='systemctl status NetworkManager'
@@ -65,12 +64,15 @@ alias gtfo='sudo shutdown now'
 alias shred='shred -vzun 50'    # truly nuke a file
 alias catwn='tail -n +1'        # cat [w]ith file[n]ames
 alias php2html='wget --convert-links --mirror --adjust-extension'
+alias pdfsearch="pdfgrep -Ri"
+alias vsudo="pkexec"
 # --mirror --convert-links --adjust-extension --page-requisites --no-parent
 alias wget-mirror='wget -mkEpnp --no-check-certificate --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0"'
 alias curl-json='curl -H "Content-Type: application/json"'
 alias gtm_date='TZ=GTM date'
 alias cloneos="rsync -aAXv --update --delete --exclude '~/.config/cloneos_excludes.list' / " # ./folder
 alias rsync-backup="rsync -aAXv --update --delete"
+alias totem="GDK_GL=gles totem"
 
 # dev life
 alias kill-jami='killall {dring,gnome-ring,jami,jami-gnome,jami-daemon}'
@@ -97,11 +99,11 @@ function grep-nmap-vuln-exploit () { cat /usr/share/nmap/scripts/script.db | gre
 
 # human life
 alias emojis="cat ~/notes/misc/emojis.md | grep :"
-#alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(date +%u) + 2)) \"entry-content\" | tail -n1 | sed 's/.*: //' | sed 's/<\/p>//g'"
+alias soupson="curl -v --silent http://www.soupson.ca/ 2>&1 | grep -m3 -A $(($(date +%u) + 2)) \"entry-content\" | tail -n1 | sed 's/.*: //' | sed 's/<\/p>//g'"
 alias bonsai='/usr/bin/cbonsai --seed $RANDOM -p -m "$(fortune)" -M 2 -l -t 0.006'
 # $1 = place or any pattern of grep, $2 = n days ago, if none than yesterday
-#function c19 () { curl https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/$(date --date=$2\ days\ ago +%x | sed "s/\//-/g").csv 2>&1 | grep -i $1; }
-#function c19qc () { curl https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov/ --silent | grep "<li>[^<].*cas" | sed -e 's/<[^>]*>//g' | sed 's/^[ \t]*//;s/[ \t]*$//'; }
+function c19 () { curl https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/$(date --date=$2\ days\ ago +%x | sed "s/\//-/g").csv 2>&1 | grep -i $1; }
+function c19qc () { curl https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov/ --silent | grep "<li>[^<].*cas" | sed -e 's/<[^>]*>//g' | sed 's/^[ \t]*//;s/[ \t]*$//'; }
 function meteo () { [[ $1 ]] && curl wttr.in/$1 || curl wttr.in/Montréal; }
 
 # removes git push gnome widget
